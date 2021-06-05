@@ -3,40 +3,8 @@ import { Button, Container, Flex, Heading, NavLink } from '@theme-ui/components'
 import { Link } from 'gatsby';
 import React, { useContext } from 'react';
 import { IdentityContext } from '../../identity-context';
+import Dashboard from '../components/Dashboard';
 
-let Dash = () => {
-
-    const { user, identity: netlifyIdentity } = useContext(IdentityContext);
-
-    return (
-        <Container>
-            <Flex as="nav">
-                <NavLink as={Link} to="/" p={2}>
-                    Home
-                </NavLink>
-                <NavLink as={Link} to={"/app"} p={2}>
-                    Dashboard
-                </NavLink>
-                {user && (
-                    <NavLink href="#!"
-                        p={2}
-                        onClick={() => {
-                            netlifyIdentity.logout()
-                        }}
-                    >
-                        Logout-{user.user_metadata.full_name}
-                    </NavLink>)}
-            </Flex>
-
-            <br />
-
-            <Flex>
-                Dash has user : {user && user.user_metadata.full_name}
-            </Flex>
-        </Container >
-
-    )
-};
 
 let DashLoggedOut = () => {
 
@@ -81,7 +49,7 @@ const App = () => {
 
     return (
         <Router>
-            <Dash path="/app" />
+            <Dashboard path="/app" />
         </Router>
     )
 }

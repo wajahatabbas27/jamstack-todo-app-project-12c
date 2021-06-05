@@ -1,11 +1,18 @@
+import { Button, Container, Flex, Heading } from '@theme-ui/components'
 import React from 'react'
 
 const index = () => {
   return (
-    <div>
-      hello wajahat
-    </div>
+    <Container>
+      <Flex sx={{ flexDirection: "column", padding: 3 }}>
+        <Heading as='h1'>Jamstack Todo App</Heading>
+        <Button
+          sx={{ marginTop: 2, color: "black" }}
+          onClick={() => { alert('Clicked') }}
+        >Login</Button>
+      </Flex>
+    </Container>
   )
 }
 
-export default index
+export default index;

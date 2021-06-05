@@ -18,6 +18,7 @@
   "dependencies": {
     "@theme-ui/presets": "^0.9.1",
     "gatsby": "^3.6.2",
+    "netlify-identity-widget": "^1.9.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "theme-ui": "^0.9.1"

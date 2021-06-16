@@ -1,4 +1,5 @@
 [build]
   command = "gatsby build && cd functions/graphql && yarn"
+  commandOrigin= "config"
   functions = "functions/"
   publish = "public/"

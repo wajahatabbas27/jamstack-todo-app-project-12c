@@ -13,11 +13,9 @@ const todosReducer = (state, action) => {
         case "toggleTodoDone":
             const newState = [...state];
             newState[action.payload] = {
-
                 done: !state[action.payload].done,
                 value: state[action.payload].value
             };
-
             return newState;
 
         default:
